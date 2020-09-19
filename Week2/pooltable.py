@@ -22,10 +22,10 @@ class PoolTable:
         self.timePlayed = self.endTime - self.startTime
         self.isOccupied = False
         with open ("pool_table_records.txt", "a") as file_object:
-            file_object.write(f"Table Number: {self.number},\n Start Time: {self.startTime},\n End Time: {self.endTime},\n Time Played: {self.timePlayed}\n")
+            file_object.write(f"Table Number: {self.number},\n Start Time: {self.startTime},\n End Time: {self.endTime},\n Time Played: {self.timePlayed}\n\n")
 
 def menu():
-    print("\n~~~~~~ Pool Table Management App ~~~~~~\n")
+    print("~~~~~~ Pool Table Management App ~~~~~~\n")
   
     
     while True:
