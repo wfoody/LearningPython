@@ -45,7 +45,7 @@ def menu():
         elif choice == "2":
             table = int(input("Which table would you like to play on? "))
             table_number = listOfTables[table - 1]
-            if table_number.isOccupied == True:
+            if table_number.isOccupied:
                 print("\nTable is already occupied.")
             else:
                 table_number.check_out()
@@ -55,7 +55,10 @@ def menu():
         elif choice == "3":
             table = int(input("Which table were you playing on? "))
             table_number = listOfTables[table - 1]
-            table_number.check_in()
+            if table_number.isOccupied:
+                table_number.check_in()
+            else:
+                print("\n\nTable is not checked out.")
         
         elif choice == "4":
             break
